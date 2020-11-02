@@ -1,6 +1,6 @@
 {
-  "domain": "deebot",
-  "name": "Ecovacs Deebot",
+  "domain": "deebot930",
+  "name": "Ecovacs Deebot 930",
   "documentation": "https://www.home-assistant.io/components/ecovacs",
   "requirements": [
     "ozmo==1.0.3"

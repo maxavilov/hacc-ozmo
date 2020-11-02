@@ -11,7 +11,6 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.components.vacuum import (
     SUPPORT_BATTERY,
     SUPPORT_CLEAN_SPOT,
-    SUPPORT_FAN_SPEED,
     SUPPORT_LOCATE,
     SUPPORT_RETURN_HOME,
     SUPPORT_SEND_COMMAND,
@@ -25,7 +24,7 @@ from homeassistant.components.vacuum import (
 
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "deebot"
+DOMAIN = "deebot930"
 
 CONF_COUNTRY = "country"
 CONF_CONTINENT = "continent"
@@ -37,7 +36,6 @@ SERVICE_TO_STRING = {
     SUPPORT_PAUSE: "pause",
     SUPPORT_STOP: "stop",
     SUPPORT_RETURN_HOME: "return_home",
-    SUPPORT_FAN_SPEED: "fan_speed",
     SUPPORT_BATTERY: "battery",
     SUPPORT_STATUS: "status",
     SUPPORT_SEND_COMMAND: "send_command",
@@ -144,11 +142,11 @@ def setup(hass, config):
         _LOGGER.debug("SUPPORTED FEATURES")
         _LOGGER.debug(dconfig.get(CONF_SUPPORTED_FEATURES))
 
-        deebot_config = {
+        deebot930_config = {
             CONF_SUPPORTED_FEATURES: strings_to_services(dconfig.get(CONF_SUPPORTED_FEATURES), STRING_TO_SERVICE)
         }
 
-        hass.data[ECOVACS_CONFIG].append(deebot_config)
+        hass.data[ECOVACS_CONFIG].append(deebot930_config)
 
         _LOGGER.debug(hass.data[ECOVACS_CONFIG])
 
